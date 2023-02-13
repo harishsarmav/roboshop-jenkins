@@ -13,3 +13,4 @@
     COMPONENT: "{{item.name}}"
     DIR: "{{item.dir}}"
   loop: "{{ pipeline_jobs }}"
+
