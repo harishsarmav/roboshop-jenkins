@@ -3,10 +3,10 @@
     src: s-job.xml
     dest: /tmp/s-job.xml
 
-- name: Create job - "{{DIR}}/{{COMPONENT}}"
+- name: Create job - "{{item.dir}}/{{item.name}}"
   community.general.jenkins_job:
     config: "{{ lookup('file', '/tmp/s-job.xml') }}"
-    name: "{{DIR}}/{{COMPONENT}}"
+    name: "{{item.dir}}/{{item.name}}"
     url: http://172.31.4.172:8080
     user: admin
     password: "{{jenkins_password}}"
