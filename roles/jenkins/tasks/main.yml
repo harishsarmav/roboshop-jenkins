@@ -8,7 +8,7 @@
   loop: "{{ folders }}"
 
 - name: Create pipeline jobs
-  ansible.builtin.include_tasks: sbranch-pipeline.yml
+  ansible.builtin.include_tasks: mbranch-pipeline.yml
   vars:
     COMPONENT: "{{item.name}}"
     DIR: "{{item.dir}}"
