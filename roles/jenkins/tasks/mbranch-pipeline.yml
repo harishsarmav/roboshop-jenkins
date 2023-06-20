@@ -19,3 +19,4 @@
 
     user: admin
     password: "{{jenkins_password}}"
+  when: out.rc == 3
